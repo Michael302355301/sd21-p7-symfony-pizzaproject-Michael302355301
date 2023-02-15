@@ -2,18 +2,97 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Pizza The Hague{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         {% endblock %}
 
         {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block header %}
+
+        <nav class='navbar navbar-expand-lg navbar-dark bg-success p-3'>
+            <div class='container-md'>
+                <a class='nav-link mx-2' href='#'>
+                    <img src="https://static.thuisbezorgd.nl/images/restaurants/nl/OQR0PN31/logo_465x320.png" height='120px'>
+                </a>
+                <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation'>
+                    <span class='navbar-toggler-icon'></span>
+                </button>
+                <div class='collapse navbar-collapse' id='navbarNavDropdown'>
+                    <ul class='navbar-nav ms-auto'>
+                        <li class='nav-item'>
+                            <a class='nav-link mx-2 text-dark' href='index.php'><b>Home </b></a>
+                        </li>
+
+                        <li class='nav-item dropdown'>
+                            <a class='nav-link mx-2 text-dark' data-bs-toggle='dropdown' role='button' aria-expanded='false' href='#'> <b>Bestellen? </b> </a>
+
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link mx-2 text-dark' href='contact' role='button'> <b> Contact </b> </a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link mx-2 text-dark' href='aanmelden.php'> <i class='bi bi-person-fill'></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+       {% endblock %}
+              
+        <br> </br>
+        </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br> <br> </br>
+
+
+
+
+
+        {% block footer %}
+            <footer class="bg-success text-center text-lg-start">
+                <div class="container p-4">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                            <h5 class="text-uppercase text-dark">Contact Gegevens</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Pizza The Hague </a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Tinwerf 10</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">2544 ED GH Den Haag</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">070 98 29 82 14</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                            <h5 class="text-uppercase text-dark">Locaties</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Den Haag</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Amsterdam</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Zwolle</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Rotterdam</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Amersfoort</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                            <h5 class="text-uppercase text-dark">Openingstijden winkel</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Maandag:	13.00 – 17.30 uur</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Dinsdag:	10.00 – 17.30 uur</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Woensdag:	10.00 – 17.30 uur</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Donderdag:	10.00 – 20.00 uur</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Vrijdag:	10.00 – 17.30 uur</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Zaterdag:	09.00 – 17.30 uur</a></li>
+                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-dark">Zondag:	GESLOTEN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        {% endblock %}
     </body>
 </html>

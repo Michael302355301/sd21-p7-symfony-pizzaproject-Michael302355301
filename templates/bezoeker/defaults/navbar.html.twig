@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<html>
+<body>
+<nav class='navbar navbar-expand-lg navbar-dark bg-success p-3'>
+    <div class='container-md'>
+        <a class='nav-link mx-2' href='#'>
+            <img src="https://static.thuisbezorgd.nl/images/restaurants/nl/OQR0PN31/logo_465x320.png" height='120px'>
+        </a>
+        <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation'>
+            <span class='navbar-toggler-icon'></span>
+        </button>
+        <div class='collapse navbar-collapse' id='navbarNavDropdown'>
+            <ul class='navbar-nav ms-auto'>
+                <li class='nav-item'>
+                    <a class='nav-link mx-2 text-dark' href='index.php'><b>Home </b></a>
+                </li>
+
+                <li class='nav-item dropdown'>
+                    <a class='nav-link mx-2 text-dark' data-bs-toggle='dropdown' role='button' aria-expanded='false' href='#'> <b>Bestellen? </b> </a>
+
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link mx-2 text-dark' href='contact' role='button'> <b> Contact </b> </a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link mx-2 text-dark' href='aanmelden.php'> <i class='bi bi-person-fill'></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</body>
+</html>
+
+
+
+{% endblock %}
