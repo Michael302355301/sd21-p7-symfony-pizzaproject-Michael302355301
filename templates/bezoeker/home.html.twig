@@ -1,7 +1,119 @@
+
 {% extends 'base.html.twig' %}
 
-
 {% block body %}
+    <style>
+        .banner{
+            background-image: url(https://orders.pizzadelight.com/assets/img/pizzadelight/banner.jpg);
+            background-size: cover;
+            height: 40vh;
+
+        }
+    </style>
 
 
+
+
+    <div class='col'>
+        <div class='banner w-auto'></div>
+    </div>
+
+    <br>
+    <br>"
+
+    <div class='container'>
+        <div class='row'>
+            <div class='col-6'>
+                <h4>  <b> 🍕 De lekkerste pizza bestel je bij Pizza The Hague 🍕</b> <br>  </h4>
+                De enige echte  The Hague style pizza bestel je bij Pizza The Hague.
+                Al sinds 2005 bezorgen wij de echte Pizza The Hague bij jou aan de deur.
+                Pizza’s uit New York kenmerken zich door de medium dikke korst die knapperig is en tegelijkertijd toch een bite heeft. Dit combineren wij met smaakvolle tomatensaus,
+                verse mozzarella en natuurlijk de heerlijkste toppings.               </div>
+        </div>
+        <br>
+        <h4> <b>  Pizza's </b></h4>
+    </div>
+    <br>
+
+    <style>
+        .categorie{
+            position: relative;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+        .categorie:hover .categorieImage{
+            opacity: 0.3;
+        }
+        .categorieImage{
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: 325px;
+            transition: .2s ease;
+            backface-visibility: hidden;
+        }
+        .categorie:hover .categorieMiddle {
+            opacity: 1;
+        }
+        .categorieMiddle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .categorieHoverImage {
+            color: black;
+            font-size: 30px;
+            padding: 16px 32px;
+        }
+        .categorieText {
+           
+
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+
+    <div class='container-md mt-2'>
+        <div class='row'>
+            <div class='col-4'>
+                <div class='categorie'>
+                    <a href='#' class='stretched-link '></a>
+                    <img src='https://cache.dominos.com/olo/6.103.5/assets/build/market/DO/_es/images/img/products/thumbnails/S_PIZPV.jpg' alt='border' class='categorieImage rounded' style='width:100%'>
+                    <div class='categorieText'><b>Vegetarische pizza's</b></div>
+                    <div class='categorieMiddle'>
+                        <div class='categorieHoverImage'><i class='bi bi-zoom-in'></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class='col-4'>
+                <div class='categorie'>
+                    <a href='#' class='stretched-link'></a>
+                    <img src='https://cache.dominos.com/olo/6.103.5/assets/build/market/DO/_es/images/img/products/thumbnails/S_PIZZZ.jpg' alt='border' class='categorieImage rounded' style='width:100%'>
+                    <div class='categorieText'><b> Vlees pizza's</b></div>
+                    <div class='categorieMiddle'>
+                        <div class='categorieHoverImage'><i class='bi bi-zoom-in'></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class='col-4'>
+                <div class='categorie'>
+                    <a href='#' class='stretched-link'></a>
+                    <img src='https://cache.dominos.com/olo/6.103.5/assets/build/market/DO/_es/images/img/products/thumbnails/S_PIZIT.jpg' alt='border' class='categorieImage rounded' style='width:100%'>
+                    <div class='categorieText'><b>Vis pizza's</b></div>
+                    <div class='categorieMiddle'>
+                        <div class='categorieHoverImage'><i class='bi bi-zoom-in'></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
 {% endblock %}
