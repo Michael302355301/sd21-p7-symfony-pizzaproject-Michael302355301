@@ -19,7 +19,7 @@ class PizzaController extends AbstractController
     public function contact(): Response
     {
         $contact = "";
-        return $this->render('bezoeker/home.html.twig',['contact'=>$contact]);
+        return $this->render('bezoeker/contact.html.twig',['contact'=>$contact]);
     }
 
 }
