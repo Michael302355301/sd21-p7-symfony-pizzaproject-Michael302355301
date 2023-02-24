@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\ProductRepository;
+use App\Repository\CategoryRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: ProductRepository::class)]
-class Product
+#[ORM\Entity(repositoryClass: CategoryRepository::class)]
+class Category
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -16,8 +16,8 @@ class Product
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column]
-    private ?int $price = null;
+    #[ORM\Column(length: 255)]
+    private ?string $image = null;
 
     #[ORM\Column(length: 255)]
     private ?string $description = null;
@@ -39,14 +39,14 @@ class Product
         return $this;
     }
 
-    public function getPrice(): ?int
+    public function getImage(): ?string
     {
-        return $this->price;
+        return $this->image;
     }
 
-    public function setPrice(int $price): self
+    public function setImage(string $image): self
     {
-        $this->price = $price;
+        $this->image = $image;
 
         return $this;
     }
@@ -62,5 +62,4 @@ class Product
 
         return $this;
     }
-
 }
