@@ -2,6 +2,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
     <style>
         .banner{
             background-image: url(https://orders.pizzadelight.com/assets/img/pizzadelight/banner.jpg);
@@ -88,36 +89,21 @@
 
     <div class='container-md mt-2'>
         <div class='row'>
-            <div class='col-4'>
-                <div class='categorie'>
-                    <a href='#' class='stretched-link '></a>
-                    <img src='https://cache.dominos.com/olo/6.103.5/assets/build/market/DO/_es/images/img/products/thumbnails/S_PIZPV.jpg' alt='border' class='categorieImage rounded' style='width:100%'>
-                    <div class='categorieText'><b>Vegetarische pizza's</b></div>
-                    <div class='categorieMiddle'>
-                        <div class='categorieHoverImage'><i class='bi bi-zoom-in'></i></div>
+            {% for item in category %}
+                <div class='col-4'>
+                    <div class='categorie'>
+                        <a href='#' class='stretched-link '></a>
+                        <img src='{{ item.image }}' alt='border' class='categorieImage rounded' style='width:100%'>
+                        <div class='categorieText'><b>{{item.name}}</b></div>
+                        <div class='categorieMiddle'>
+                            <div class='categorieHoverImage'><i class='bi bi-zoom-in'></i></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class='col-4'>
-                <div class='categorie'>
-                    <a href='#' class='stretched-link'></a>
-                    <img src='https://cache.dominos.com/olo/6.103.5/assets/build/market/DO/_es/images/img/products/thumbnails/S_PIZZZ.jpg' alt='border' class='categorieImage rounded' style='width:100%'>
-                    <div class='categorieText'><b>‎ ‎ ‎ ‎ ‎   Vlees pizza's</b></div>
-                    <div class='categorieMiddle'>
-                        <div class='categorieHoverImage'><i class='bi bi-zoom-in'></i></div>
-                    </div>
-                </div>
-            </div>
-            <div class='col-4'>
-                <div class='categorie'>
-                    <a href='#' class='stretched-link'></a>
-                    <img src='https://cache.dominos.com/olo/6.103.5/assets/build/market/DO/_es/images/img/products/thumbnails/S_PIZIT.jpg' alt='border' class='categorieImage rounded' style='width:100%'>
-                    <div class='categorieText'><b>  ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎Vis pizza's</b></div>
-                    <div class='categorieMiddle'>
-                        <div class='categorieHoverImage'><i class='bi bi-zoom-in'></i></div>
-                    </div>
-                </div>
-            </div>
+
+            {% endfor %}
+
+
         </div>
     </div>
     <br>
