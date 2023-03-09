@@ -92,7 +92,7 @@
             {% for item in category %}
                 <div class='col-4'>
                     <div class='categorie'>
-                        <a href='#' class='stretched-link '></a>
+                        <a href="{{ path('cat_prod', {id: item.id})}}" class='stretched-link '></a>
                         <img src='{{ item.image }}' alt='border' class='categorieImage rounded' style='width:100%'>
                         <div class='categorieText'><b>{{item.name}}</b></div>
                         <div class='categorieMiddle'>
