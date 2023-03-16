@@ -5,7 +5,7 @@
 
 
 {% block body %}
-    </style>
+
 
 
 
@@ -52,20 +52,7 @@
             transition: all 0.8s;
         }
 
-        .dot {
-            height: 14px;
-            width: 14px;
-            background-color: green;
-            border-radius: 50%;
-            position: absolute;
-            left: 27%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 8px;
-            color: #fff;
-            opacity: 0;
-        }
+
 
         .cart-button {
             height: 48px
@@ -75,22 +62,7 @@
             box-shadow: none
         }
 
-        .cart {
-            position: relative;
-            height: 48px !important;
-            width: 50px;
-            margin-right: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff;
-            padding: 11px;
-            border-radius: 5px;
-            font-size: 14px;
-            transition: 1s ease-in-out;
-            overflow: hidden;
 
-        }
 
         .cart-button.clicked span.dot {
             animation: item 0.3s ease-in forwards
@@ -148,12 +120,13 @@
             overflow: hidden;
         }
     </style>
+
     <div class="wrapper">
 
 
-        <div class="container">
+        <div class="container-md mt-2">
 
-            <div class="row g-1">
+            <div class="row">
                 {% for product in products %}
                 <div class="col-md-3">
 
@@ -172,8 +145,8 @@
                             <span>{{product.name}}</span>
 
 
-                            <div class="buttons d-flex flex-row">
-                                <div <i class="fa fa-shopping-cart"></i></div> <button class="btn btn-dark cart-button btn-block"> Add to cart </button>
+                            <div class="buttons flex-row text-center">
+                                <div </div> <button class="btn btn-dark cart-button btn-block"> <i class="bi bi-cart2"></i> Bestel nu</button>
                             </div>
 
                             <div class="weight">
@@ -190,11 +163,15 @@
 
 
                 </div>
-                {% endfor %}
+
 
 
             </div>
+        {% endfor %}
         </div>
+
+
     </div>
-    <br>
+
+    <br> <br><br> <br><br><br><br>
 {% endblock %}
