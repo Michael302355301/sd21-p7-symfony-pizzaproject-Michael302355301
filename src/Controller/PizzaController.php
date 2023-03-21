@@ -41,4 +41,10 @@ class PizzaController extends AbstractController
         return $this->render('bezoeker/contact.html.twig',['contact'=>$contact]);
     }
 
+    #[Route('login')]
+    public function login(): Response
+    {
+        $login = "";
+        return $this->render('bezoeker/login.html.twig',['login'=>$login]);
+    }
 }
