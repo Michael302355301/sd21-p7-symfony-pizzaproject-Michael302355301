@@ -14,8 +14,6 @@ class Order
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $nme = null;
 
     #[ORM\Column(length: 255)]
     private ?string $email = null;
@@ -32,22 +30,15 @@ class Order
     #[ORM\Column(length: 255)]
     private ?string $lastname = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $name = null;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getNme(): ?string
-    {
-        return $this->nme;
-    }
 
-    public function setNme(string $nme): self
-    {
-        $this->nme = $nme;
-
-        return $this;
-    }
 
     public function getEmail(): ?string
     {
@@ -105,6 +96,18 @@ class Order
     public function setLastname(string $lastname): self
     {
         $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
 
         return $this;
     }
