@@ -19,10 +19,6 @@ class ArticleFormType extends AbstractType
             ->add('postcode')
             ->add('email')
             ->add('phonenumber')
-            ->add('product', EntityType::class, [
-                'class' => Product::class,
-                'choice_label' => 'name',
-            ])
             ->add('save',SubmitType::class)
         ;
     }

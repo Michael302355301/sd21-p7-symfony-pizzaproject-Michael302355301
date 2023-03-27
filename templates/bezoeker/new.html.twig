@@ -1,8 +1,23 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <h1>Form </h1>
-    {{ form_start(articleForm) }}
-    {{ form_widget(articleForm) }}
-   <button type="submit" class="btn btn-primary">Create!</button>
+
+  <br>
+    <div class="container-md margin2">
+    <div class="row ">
+    <div class=" col-12">
+        <div class=" bg-light">
+            <div class="card-body p-5">
+                <div class="mb-3 mt-md-4">
+                    <h1> {{ products }} </h1>
+                    {{ form_start(articleForm) }}
+                    {{ form_widget(articleForm) }}
+
     {{ form_end(articleForm) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+<br>
 {% endblock %}

@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 use App\Entity\Order;
+use App\Entity\Product;
 use App\Forms\ArticleFormType;
+use App\Repository\OrderRepository;
 use App\Repository\ProductRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -51,10 +53,13 @@ class PizzaController extends AbstractController
         return $this->render('bezoeker/login.html.twig',['login'=>$login]);
     }
 
-    #[Route('/form')]
-    public function new(Request $request, EntityManagerInterface $em) : Response
+    #[Route('/form/{id}', name:'formulier')]
+    public function new(Request $request, OrderRepository $orderRepository, Product $pizza, EntityManagerInterface $em) : Response
     {
         $order = new Order();
+
+        $order->setProduct($pizza);
+        $pizzaName = $pizza->getName();
         $form = $this->createForm(ArticleFormType::class, $order);
 
         $form->handleRequest($request);
@@ -63,10 +68,13 @@ class PizzaController extends AbstractController
             $order = $form->getData();
             $em->persist($order);
             $em->flush();
+
         }
 
         return $this->renderForm('bezoeker/new.html.twig', [
-            'articleForm' => $form]);
+            'articleForm' => $form,
+            'products' => $pizzaName
+        ]);
     }
 
     public function edit(Order $article)
