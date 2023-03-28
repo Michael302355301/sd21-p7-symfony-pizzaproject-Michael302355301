@@ -9,10 +9,15 @@
             <div class="card-body p-5">
                 <div class="mb-3 mt-md-4">
                     <h1> {{ products }} </h1>
+                    {% for message in app.flashes('success') %}
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
                     {{ form_start(articleForm) }}
                     {{ form_widget(articleForm) }}
-
-    {{ form_end(articleForm) }}
+                    <button class="btn btn-dark" type="submit">Bestel</button>
+                    {{ form_end(articleForm) }}
                 </div>
             </div>
         </div>

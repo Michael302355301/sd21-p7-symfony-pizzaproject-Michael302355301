@@ -18,7 +18,7 @@ class PizzaController extends AbstractController
 {
 
 
-    #[Route('/')]
+    #[Route('/', name:'home')]
     public function home(EntityManagerInterface $entityManager): Response
     {
         $category = $entityManager->getRepository(Category::class)->findAll();
@@ -26,7 +26,7 @@ class PizzaController extends AbstractController
         if (!$category) {
             throw $this->createNotFoundException('No product found');
         }
-        return $this->render('bezoeker/home.html.twig', ['category' => $category]);
+        return $this->render('bezoeker/home.html.twig', ['categorys' => $category]);
     }
 
     #[Route('/category/{id}', name: 'cat_prod')]
@@ -69,6 +69,8 @@ class PizzaController extends AbstractController
             $em->persist($order);
             $em->flush();
 
+            $this->addFlash('success', 'Bedankt voor uw besteling!');
+//            return $this->redirectToRoute('home');
         }
 
         return $this->renderForm('bezoeker/new.html.twig', [

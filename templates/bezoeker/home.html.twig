@@ -89,12 +89,12 @@
 
     <div class='container-md mt-2'>
         <div class='row'>
-            {% for item in category %}
+            {% for category in categorys %}
                 <div class='col-4'>
                     <div class='categorie'>
-                        <a href="{{ path('cat_prod', {id: item.id})}}" class='stretched-link '></a>
-                        <img src='{{ item.image }}' alt='border' class='categorieImage rounded' style='width:100%'>
-                        <div class='categorieText'><b>{{item.name}}</b></div>
+                        <a href="{{ path('cat_prod', {id: category.id})}}" class='stretched-link '></a>
+                        <img src='{{ category.image }}' alt='border' class='categorieImage rounded' style='width:100%'>
+                        <div class='categorieText'><b>{{category.name}}</b></div>
                         <div class='categorieMiddle'>
                             <div class='categorieHoverImage'><i class='bi bi-zoom-in'></i></div>
                         </div>
