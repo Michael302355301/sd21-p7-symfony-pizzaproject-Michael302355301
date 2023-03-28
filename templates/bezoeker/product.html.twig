@@ -1,0 +1,178 @@
+
+
+
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+
+
+
+
+
+
+    <style>
+        body{
+
+            background: #eee;
+        }
+
+
+        .wrapper{
+
+            margin-top: 30px;
+        }
+
+        .card{
+               margin-top: 30px;
+            border:1px solid #eee;
+            cursor: pointer;
+        }
+
+
+        .weight{
+
+            margin-top: -65px;
+            transition: all 0.5s;
+        }
+
+        .weight small{
+
+            color: #e2dede;
+        }
+
+        .buttons {
+            padding: 10px;
+            background-color: #d6d4d44f;
+            border-radius: 4px;
+            position: relative;
+            margin-top: 7px;
+            opacity: 0;
+            transition: all 0.8s;
+        }
+
+
+
+        .cart-button {
+            height: 48px
+        }
+
+        .cart-button:focus {
+            box-shadow: none
+        }
+
+
+
+        .cart-button.clicked span.dot {
+            animation: item 0.3s ease-in forwards
+        }
+
+        @keyframes item {
+            0% {
+                opacity: 1;
+                top: 30%;
+                left: 30%
+            }
+
+            25% {
+                opacity: 1;
+                left: 26%;
+                top: 0%
+            }
+
+            50% {
+                opacity: 1;
+                left: 23%;
+                top: -22%
+            }
+
+            75% {
+                opacity: 1;
+                left: 19%;
+                top: -18%
+            }
+
+            100% {
+                opacity: 1;
+                left: 14%;
+                top: 28%
+            }
+        }
+
+
+
+        .card:hover .buttons{
+
+            opacity: 1;
+        }
+
+
+        .card:hover .weight{
+
+            margin-top: 1px;
+        }
+
+        .card:hover{
+
+            transform: scale(1.04);
+            z-index: 2;
+            overflow: hidden;
+        }
+    </style>
+
+    <div class="wrapper">
+
+
+        <div class="container-md mt-2">
+
+            <div class="row">
+                {% for product in products %}
+
+                <div class="col-md-3">
+
+                    <div class="card p-3">
+
+                        <div class="text-center">
+
+                            <img src='{{ product.img }}' width="200">
+
+                        </div>
+
+                        <div class="product-details">
+
+
+                            <span class="font-weight-bold d-block">€{{product.price}}</span>
+                            <span>{{product.name}}</span>
+
+
+                            <div class="buttons flex-row text-center">
+                                <div </div> <a href="{{ path('formulier' , {id: product.id}) }}"> <button class="btn btn-dark cart-button btn-block"> <i class="bi bi-cart2"></i> Bestel nu</button> </a>
+                            </div>
+
+                            <div class="weight">
+
+                                <small>{{ product.description }}</small>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+        {% endfor %}
+        </div>
+
+
+    </div>
+
+    <br> <br><br> <br><br><br><br>
+{% endblock %}

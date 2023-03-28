@@ -1,0 +1,48 @@
+
+
+
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+ <br> <br>
+    <body class="">
+
+
+    <div class="margin2 d-flex justify-content-center align-items-center  ">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class=" bg-light">
+                        <div class="card-body p-5">
+                            <form class="mb-3 mt-md-4">
+                                <h2 class="fw-bold mb-2  ">Aanmelden</h2>
+                                <p class=" mb-5">Vul alstublieft uw email en wachtwoord!</p>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label ">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="naam@thgbakker.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label ">Wachtwoord</label>
+                                    <input type="password" class="form-control" id="password" placeholder="*******">
+                                </div>
+                                <p class="small"><a class="text-primary" href="">Wachtwoord vergeten?</a></p>
+                                <div class="d-grid">
+                                    <button class="btn btn-outline-dark" type="submit">Login</button>
+                                </div>
+                            </form>
+                            <div>
+                                <p class="mb-0  text-center">Nog geen account registreer nu! <a href="signup.html" class="text-primary fw-bold">Registreren
+                                    </a></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<br> <br>
+{% endblock %}
